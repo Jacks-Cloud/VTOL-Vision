@@ -39,29 +39,30 @@ HT_chord=np.array([1,2,3,4,5,6,7,8,9]) * ureg.inch
 HT_length=S_HT/HT_chord
 #print('Length of Horizontal Tail =', HT_length)
 
-plt.plot(HT_chord,HT_length)
-
 
 
 # Vertical Tail Sizing Calculations
 # C_VT = S_VT * L_VT / ( wingspan * S_ref)
 
-# C_HT value shoudl be between 0.02-0.05
+# C_VT value shoudl be between 0.02-0.05
 C_VT=0.02  # unitless
 
-# Educated guess on what L_HT would be
+# Educated guess on what L_VT would be
 L_VT=18 * ureg.inch
 
 S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
 
-# Estimated Horizontal Tail chord and length
+# Estimated Vertical Tail chord and length
 VT_chord=np.array([1,2,3,4,5,6,7,8,9]) * ureg.inch
-#print('Chord of Horizontal Tail =', HT_chord)
+#print('Chord of Vertical Tail =', HT_chord)
 
 VT_length=S_VT/VT_chord
-#print('Length of Horizontal Tail =', HT_length)
+#print('Length of Vertical Tail =', HT_length)
 
+
+
+plt.plot(HT_chord,HT_length)
 plt.plot(VT_chord,VT_length)
 
 plt.title("Tail Size")
