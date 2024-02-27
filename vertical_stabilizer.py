@@ -16,7 +16,7 @@ S_ref_inch=S_ref_meter.to(ureg.inch**2)
 chord_inch=6.17 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
-wingspan_inch=77 * ureg.inch 
+wingspan_inch=62 * ureg.inch 
 wingspan_meter=wingspan_inch.to(ureg.meter)
 
 
@@ -28,7 +28,7 @@ wingspan_meter=wingspan_inch.to(ureg.meter)
 C_VT=0.02  # unitless
 
 # Educated guess on what L_VT would be
-L_VT=18 * ureg.inch
+L_VT=11 * ureg.inch
 
 S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
@@ -42,13 +42,11 @@ VT_length=S_VT/VT_chord
 
 
 
-plt.plot(HT_chord,HT_length)
 plt.plot(VT_chord,VT_length)
 
-plt.title("Tail Size")
+plt.title("Vertical Stabilizer Size")
 plt.xlabel("Chord Length (inches)")
 plt.ylabel("Wingspan Length (inches)")
-plt.legend(["Horizontal Tail", "Vertical Tail"])
 plt.grid()
 
-plt.savefig('Tail_Sizing.png')
+plt.savefig('Vertical_Stabilizer_Sizing.png')

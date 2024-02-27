@@ -16,7 +16,7 @@ S_ref_inch=S_ref_meter.to(ureg.inch**2)
 chord_inch=9.6 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
-wingspan_inch=77 * ureg.inch 
+wingspan_inch=62 * ureg.inch 
 wingspan_meter=wingspan_inch.to(ureg.meter)
 
 
