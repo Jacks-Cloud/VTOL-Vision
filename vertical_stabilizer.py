@@ -34,7 +34,7 @@ S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
 
 # Estimated Vertical Tail chord and length
-VT_chord=np.array([1,2,3,4,5,6,7,8,9]) * ureg.inch
+VT_chord=np.array([1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9]) * ureg.inch
 #print('Chord of Vertical Tail =', HT_chord)
 
 VT_length=S_VT/VT_chord
