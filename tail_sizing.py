@@ -27,13 +27,13 @@ wingspan_meter=wingspan_inch.to(ureg.meter)
 C_HT=0.3  # unitless
 
 # Educated guess on what L_HT would be
-L_HT=6.4 * ureg.inch
+L_HT=11 * ureg.inch
 
 S_HT=C_HT*chord_inch*S_ref_inch/L_HT
 print('Surface area of the Horizontal Tail is =', S_HT)
 
 # Estimated Horizontal Tail chord and length
-HT_chord=np.array([1,2,3,4,5,6,7,8,9]) * ureg.inch
+HT_chord=np.array([1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9]) * ureg.inch
 #print('Chord of Horizontal Tail =', HT_chord)
 
 HT_length=S_HT/HT_chord
@@ -45,7 +45,7 @@ HT_length=S_HT/HT_chord
 S_HT_canard=172.8306 * ureg.inch**2
 
 L_HT_ideal=C_HT*chord_inch*S_ref_inch/S_HT_canard
-print(L_HT_ideal)
+print('Ideal distance between center of gravity and 1/4 chord of the canard with its current 1:3 ratio =', L_HT_ideal)
 
 
 
@@ -56,13 +56,13 @@ print(L_HT_ideal)
 C_VT=0.02  # unitless
 
 # Educated guess on what L_VT would be
-L_VT=7.5 * ureg.inch
+L_VT=11 * ureg.inch
 
 S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
 
 # Estimated Vertical Tail chord and length
-VT_chord=np.array([1,2,3,4,5,6,7,8,9]) * ureg.inch
+VT_chord=np.array([1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9]) * ureg.inch
 #print('Chord of Vertical Tail =', HT_chord)
 
 VT_length=S_VT/VT_chord
