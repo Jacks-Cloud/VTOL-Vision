@@ -13,7 +13,7 @@ ureg = pint.UnitRegistry()
 S_ref_meter=0.44608787 * ureg.meter**2
 S_ref_inch=S_ref_meter.to(ureg.inch**2)
 
-chord_inch=6.17 * ureg.inch
+chord_inch=9.25 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
 wingspan_inch=62 * ureg.inch 

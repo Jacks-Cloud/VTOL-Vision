@@ -13,7 +13,7 @@ ureg = pint.UnitRegistry()
 S_ref_meter=0.44608787 * ureg.meter**2
 S_ref_inch=S_ref_meter.to(ureg.inch**2)
 
-chord_inch=9.6 * ureg.inch
+chord_inch=9.25 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
 wingspan_inch=62 * ureg.inch 
@@ -27,7 +27,7 @@ wingspan_meter=wingspan_inch.to(ureg.meter)
 C_HT=0.3  # unitless
 
 # Educated guess on what L_HT would be
-L_HT=18 * ureg.inch
+L_HT=6.4 * ureg.inch
 
 S_HT=C_HT*chord_inch*S_ref_inch/L_HT
 print('Surface area of the Horizontal Tail is =', S_HT)
@@ -41,6 +41,14 @@ HT_length=S_HT/HT_chord
 
 
 
+# with the current designed canard, this is what the ideal distance away from the center of gravity should be
+S_HT_canard=172.8306 * ureg.inch**2
+
+L_HT_ideal=C_HT*chord_inch*S_ref_inch/S_HT_canard
+print(L_HT_ideal)
+
+
+
 # Vertical Tail Sizing Calculations
 # C_VT = S_VT * L_VT / ( wingspan * S_ref)
 
@@ -48,7 +56,7 @@ HT_length=S_HT/HT_chord
 C_VT=0.02  # unitless
 
 # Educated guess on what L_VT would be
-L_VT=18 * ureg.inch
+L_VT=7.5 * ureg.inch
 
 S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
