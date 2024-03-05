@@ -42,7 +42,7 @@ HT_length=S_HT/HT_chord
 
 
 # with the current designed canard, this is what the ideal distance away from the center of gravity should be
-S_HT_canard=172.8306 * ureg.inch**2
+S_HT_canard=138.2644802405613 * ureg.inch**2
 
 L_HT_ideal=C_HT*chord_inch*S_ref_inch/S_HT_canard
 print('Ideal distance between center of gravity and 1/4 chord of the canard with its current 1:3 ratio =', L_HT_ideal)
