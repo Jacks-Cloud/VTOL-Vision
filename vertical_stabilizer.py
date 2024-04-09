@@ -1,6 +1,6 @@
 ## This document is going to calculation the size of the vertical and horizontal tail sizes relative to the wing size. The code is specifically for the design 1 aircraft (without the canards).
 
-# importining pint ($ pip install pint)
+##$pip install pint
 import pint
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,10 +13,10 @@ ureg = pint.UnitRegistry()
 S_ref_meter=0.44608787 * ureg.meter**2
 S_ref_inch=S_ref_meter.to(ureg.inch**2)
 
-chord_inch=9.25 * ureg.inch
+chord_inch=9.88 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
-wingspan_inch=62 * ureg.inch 
+wingspan_inch=65.25 * ureg.inch 
 wingspan_meter=wingspan_inch.to(ureg.meter)
 
 
