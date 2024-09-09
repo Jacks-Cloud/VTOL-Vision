@@ -10,25 +10,24 @@ ureg = pint.UnitRegistry()
 
 
 # Our Calculated/Given variables
-S_ref_meter=0.44608787 * ureg.meter**2
-S_ref_inch=S_ref_meter.to(ureg.inch**2)
-
 chord_inch=9.88 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
-wingspan_inch=65.25 * ureg.inch 
+wingspan_inch=65 * ureg.inch 
 wingspan_meter=wingspan_inch.to(ureg.meter)
 
-
+S_ref_inch=wingspan_inch * chord_inch
+S_ref_meter=S_ref_inch.to(ureg.meter**2)
+print('S_ref is ', S_ref_inch)
 
 # Vertical Tail Sizing Calculations
 # C_VT = S_VT * L_VT / ( wingspan * S_ref)
 
 # C_VT value shoudl be between 0.02-0.05
-C_VT=0.02  # unitless
+C_VT=0.03  # unitless
 
 # Educated guess on what L_VT would be
-L_VT=11 * ureg.inch
+L_VT=9 * ureg.inch
 
 S_VT=C_VT*wingspan_inch*S_ref_inch/L_VT
 print('Surface area of the Vertical Tail is =', S_VT)
