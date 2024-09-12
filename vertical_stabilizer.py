@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 ureg = pint.UnitRegistry()
 
 
-# Our Calculated/Given variables
+# Our Calculated/Given variables=========================================================
 chord_inch=9.88 * ureg.inch
 chord_meter=chord_inch.to(ureg.meter)
 
@@ -18,7 +18,7 @@ wingspan_meter=wingspan_inch.to(ureg.meter)
 
 S_ref_inch=wingspan_inch * chord_inch
 S_ref_meter=S_ref_inch.to(ureg.meter**2)
-print('S_ref is ', S_ref_inch)
+#print('S_ref is ', S_ref_inch)
 
 # Vertical Tail Sizing Calculations
 # C_VT = S_VT * L_VT / ( wingspan * S_ref)
